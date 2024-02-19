@@ -5,6 +5,7 @@ const imagem: HTMLImageElement | null = document.querySelector(".imagem_perfil")
 const descricao: HTMLParagraphElement | null = document.querySelector(".descricao_usuario");
 const seguidores: HTMLParagraphElement | null = document.querySelector(".seguidores");
 const contato: HTMLParagraphElement | null = document.querySelector(".contato");
+const bttAcessarPerfil: HTMLAnchorElement | null = document.querySelector(".btt_acessarPerfil");
 
 if (bttPesquisa && inputUsuario) {
     bttPesquisa.addEventListener("click", () => {
@@ -31,7 +32,7 @@ async function procurarUsuario(username: string) {
     }
 }
 
-function definirUsuario(data: { name: string | null; avatar_url: string | null; bio: string | null; followers: number | null; email: string | null }) {
+function definirUsuario(data: { name: string | null; avatar_url: string | null; bio: string | null; followers: number | null; email: string | null; html_url: string | null }) {
     if (nome && data.name) {
         nome.innerText = `Nome: ${data.name}`;
     }
@@ -51,5 +52,8 @@ function definirUsuario(data: { name: string | null; avatar_url: string | null; 
 
     if (contato && data.email) {
         contato.innerText = `Email: ${data.email}`;
+    }
+    if (bttAcessarPerfil && data.html_url) {
+        bttAcessarPerfil.href = data.html_url;
     }
 }

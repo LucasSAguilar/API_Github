@@ -15,6 +15,7 @@ const imagem = document.querySelector(".imagem_perfil");
 const descricao = document.querySelector(".descricao_usuario");
 const seguidores = document.querySelector(".seguidores");
 const contato = document.querySelector(".contato");
+const bttAcessarPerfil = document.querySelector(".btt_acessarPerfil");
 if (bttPesquisa && inputUsuario) {
     bttPesquisa.addEventListener("click", () => {
         procurarUsuario(inputUsuario.value);
@@ -55,5 +56,8 @@ function definirUsuario(data) {
     }
     if (contato && data.email) {
         contato.innerText = `Email: ${data.email}`;
+    }
+    if (bttAcessarPerfil && data.html_url) {
+        bttAcessarPerfil.href = data.html_url;
     }
 }
