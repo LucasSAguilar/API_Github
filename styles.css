@@ -3,6 +3,7 @@
 * {
     font-family: "Kode Mono", monospace;
     color: #FFFFFF;
+    text-align: center;
 }
 
 body {
@@ -139,7 +140,6 @@ body {
     .subtexto {
         font-size: 0.8rem;
         padding: 10px;
-        text-align: center;
     }
 
     .titulo_site {
@@ -152,7 +152,6 @@ body {
     }
 
     .descricao_usuario {
-        text-align: center;
         font-size: 0.8rem;
         margin-bottom: 40px;
     }
