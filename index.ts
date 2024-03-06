@@ -11,7 +11,7 @@ if (bttPesquisa && inputUsuario) {
     bttPesquisa.addEventListener("click", () => {
         procurarUsuario(inputUsuario.value)
     })
-}
+};
 
 async function procurarUsuario(username: string) {
     try {
@@ -30,7 +30,7 @@ async function procurarUsuario(username: string) {
     } catch (err) {
         console.error(`Ocorreu um erro: ${err}`);
     }
-}
+};
 
 function definirUsuario(data: { name: string | null; avatar_url: string | null; bio: string | null; followers: number | null; email: string | null; html_url: string | null }) {
     if (nome && data.name) {
